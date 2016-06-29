@@ -602,7 +602,9 @@ class AutodiscoveryManager
         }
 
         curl_setopt_array($ch, $opts);
-        $this->last_response    = curl_exec($ch);
+        // Remove original code to use the Avature curl wrapper
+        // in order to pass the Curl policy
+        $this->last_response    = \COR_curl_Wrapper::execute($ch);
         $this->last_info        = curl_getinfo($ch);
         $this->last_curl_errno  = curl_errno($ch);
         $this->last_curl_error  = curl_error($ch);
