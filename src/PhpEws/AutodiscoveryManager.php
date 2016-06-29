@@ -463,7 +463,6 @@ class AutodiscoveryManager
             CURLOPT_IPRESOLVE           => CURL_IPRESOLVE_V4
         );
         curl_setopt_array($ch, $opts);
-        // $this->last_response    = curl_exec($ch);
 
         // Remove original code to use the Avature curl wrapper
         // in order to pass the Curl policy

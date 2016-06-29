@@ -64,8 +64,6 @@ class NtlmSoapClient extends \SoapClient
         curl_setopt($this->ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC | CURLAUTH_NTLM);
         curl_setopt($this->ch, CURLOPT_USERPWD, $this->user.':'.$this->password);
 
-        // $response = curl_exec($this->ch);
-
         // Remove original code to use the Avature curl wrapper
         // in order to pass the Curl policy 
         $response = \COR_curl_Wrapper::execute($this->ch);
